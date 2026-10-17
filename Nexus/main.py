@@ -39,7 +39,7 @@ if getattr(sys, "frozen", False):
 else:
     BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
-ENGINES_DIR = os.path.join(BASE_DIR, "Engines")
+ENGINES_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "Engines")
 PROJECTS_DIR = os.path.join(BASE_DIR, "Projects")
 os.makedirs(ENGINES_DIR, exist_ok=True)
 os.makedirs(PROJECTS_DIR, exist_ok=True)
